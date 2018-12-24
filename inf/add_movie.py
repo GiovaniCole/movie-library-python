@@ -9,7 +9,7 @@ def add_movie_validation(movie):
         raise ValueError('title must contain more than 7 characters')
 
     if len(movie['year']) != 4:
-        raise ValueError('year must must be a year with 4 numbers')
+        raise ValueError('invalid year')
 
     return AddMovie(movie['title'], movie['year']).add_movie_to_db()
 
